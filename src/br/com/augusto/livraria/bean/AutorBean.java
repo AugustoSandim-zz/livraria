@@ -13,9 +13,11 @@ public class AutorBean {
 		return autor;
 	}
 	
-	public void gravar() {
+	public String gravar() {
 		System.out.println("Gravando auto " + this.autor.getNome());
 		
 		new DAO<Autor>(Autor.class).adicionar(this.autor);
+		
+		return "livro?faces-redirect=true";
 	}
 }

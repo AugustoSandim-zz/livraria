@@ -38,6 +38,10 @@ public class LivroBean {
 	public List<Autor> getAutores() {
 		return new DAO<Autor>(Autor.class).listaTodos();
 	}
+	
+	public List<Livro> getLivros() {
+		return new DAO<Livro>(Livro.class).listaTodos();
+	}
 
 	public void gravarAutor() {
 		Autor autor = new DAO<Autor>(Autor.class).buscaPorId(this.autorId);
